@@ -9,9 +9,9 @@
     "lint": "eslint \"src/**/*.ts\"",
     "prepare": "npm run build",
     "prettier-format": "prettier --config .prettierrc \"src/**/*.ts\" --write",
-    "test": "node --trace-warnings ./test",
     "start": "node dist/app.js",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
+    "dev": "ts-node-dev src/app.ts"
   },
   "repository": {
     "type": "git",
