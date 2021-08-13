@@ -5,13 +5,14 @@ export default class {
     private users: { ID?: string; data: any }[] = []
 
     constructor(limit = 50) {
-        this.fetch(limit).then((data) => {
-            this.users = data
-            console.log(this.users)
-        })
         setTimeout(async () => {
+            console.log('Updating Users...')
             this.users = await this.fetch(limit)
         }, 120000)
+        this.fetch(limit).then((data) => {
+            this.users = data
+        })
+
     }
 
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
