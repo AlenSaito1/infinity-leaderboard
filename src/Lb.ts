@@ -5,7 +5,7 @@ export default class {
     private users: { ID?: string; data: any }[] = []
 
     constructor(limit = 50) {
-        setTimeout(async () => {
+        setInterval(async () => {
             console.log('Updating Users...')
             this.users = await this.fetch(limit)
         }, 120000)
